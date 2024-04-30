@@ -21,6 +21,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap" rel="stylesheet">
 
 	<!-- Icons -->
+	<link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
 	<link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
 
 	<!-- Core CSS -->
@@ -37,7 +38,6 @@
 	<link rel="stylesheet" href="{{ asset('css/bt5/form-validation.css') }}" />
 
 	<!-- Page CSS -->
-	<link rel="stylesheet" href="{{ asset('css/page-auth.css') }}" />
 
 	<!-- Helpers -->
 	<script src="{{ asset('js/bt5/helpers.js') }}"></script>
@@ -113,8 +113,9 @@
 
 	<script src="{{ asset('js/bt5/libs/perfect-scrollbar.js') }}"></script>
 	<script src="{{ asset('js/bt5/libs/hammer.js') }}"></script>
+	<script src="{{ asset('js/bt5/libs/typeahead.js') }}"></script>
+	<script src="{{ asset('js/bt5/libs/i18n.js') }}"></script>
 	<script src="{{ asset('js/bt5/menu.js') }}"></script>
-	
 	
 	<script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
 	<!-- endbuild -->

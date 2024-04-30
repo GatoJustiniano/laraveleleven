@@ -71,3 +71,6 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 Login laravel
 
 Plantilla Dashboard
+
+Migrate Data
+Roles and Permission
