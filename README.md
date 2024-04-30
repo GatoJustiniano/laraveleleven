@@ -74,3 +74,8 @@ Plantilla Dashboard
 
 Migrate Data
 Roles and Permission
+
+CU:User and Proyect
+Page Errors
+composer require yajra/laravel-datatables:^10.0
+
