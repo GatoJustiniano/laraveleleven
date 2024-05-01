@@ -73,7 +73,7 @@
             </table>
         </div>
     </div>
-    <div class="card-footer py-0 text-center">
+    <div class="card-footer py-0">
         {{ $proyects->links() }}
     </div>
 
