@@ -73,6 +73,5 @@
         </div>
         <!-- /Barra de Botones Derecho -->
     </div>
-
 </div>
 @endsection

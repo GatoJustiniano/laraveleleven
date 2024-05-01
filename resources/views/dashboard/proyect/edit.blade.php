@@ -5,9 +5,8 @@
     @include('dashboard.partials.validation-error')
     <div class="row">
         <div class="col-md-6">
-            <div class="card mb-4">
+            <div class="card">
                 <div class="card-body ">
-
                     <form action="{{ route('proyect.update', $proyect->id) }}" method="POST">
                         @method('PUT')
                         @include('dashboard.proyect._form')

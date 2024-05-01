@@ -9,22 +9,26 @@
         <form method="POST" action="{{ route('roles.update', $role->id) }}" class="form-horizontal">
           @csrf
           @method('PUT')
-          <div class="form-group">
+          <div class="mb-3">
             <label for="name" class="form-label">Nombre del rol</label>
-            <input type="text" class="form-control" name="name" value="{{ old('name', $role->name) }}"
-              autocomplete="off" autofocus>
+            <input type="text" class="form-control" name="name" value="{{ old('name', $role->name) }}">
           </div>
-          <label for="name" class="form-label mt-3">Permisos:</label>
-          <div class="row ms-2">
-                @foreach ($permissions as $id => $permission)
-                  <div class="col-md-5 form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" name="permissions[]"
-                    value="{{ $id }}" {{ $role->permissions->contains($id) ? 'checked' : '' }}>
-                    <label class="form-check-label" >{{ $permission }}</label>
-                  </div>
-                @endforeach            
+          <div class="mb-3">
+            <label for="name" class="form-label">Permisos:</label>
+            <div class="row ms-2">
+              @foreach ($permissions as $id => $permission)
+              <div class="col-md-5 form-check form-check-inline">
+                <input class="form-check-input" type="checkbox" 
+                  name="permissions[]" value="{{ $id }}" 
+                  {{ $role->permissions->contains($id) ? 'checked' : '' }}>
+                <label class="form-check-label">{{ $permission }}</label>
+              </div>
+              @endforeach
+            </div>
           </div>
-          <button type="submit" class="btn btn-outline-success btn-lg mt-3">Actualizar</button>
+          <div class="mb-3">
+            <button type="submit" class="btn btn-outline-success">Actualizar</button>
+          </div>
         </form>
 
       </div>
