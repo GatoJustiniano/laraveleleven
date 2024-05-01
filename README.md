@@ -82,5 +82,5 @@ composer require yajra/laravel-datatables:^10.0
 Button outline
 Button confirm
 
-npm install sweetalert2
+add sweetalert2
 

@@ -1,4 +1,4 @@
-@if ($settingGeneral->notification_type == 'nt-2')
+@if ($settingGeneral->notification_type == 'nt-2-bootstrap')
 
     @if (session('status'))
         <div id="autoCloseAlert" class="alert alert-primary alert-dismissible text-center" role="alert">
@@ -51,7 +51,7 @@
 
 {{-- ////////////// --}}
 
-@if ($settingGeneral->notification_type == 'nt-1')
+@if ($settingGeneral->notification_type == 'nt-1-sweetalert')
 
     @if(session('status'))
         <script>        

@@ -20,7 +20,7 @@ class SettingGeneralSeeder extends Seeder
             'currency' => 'BOB',
             'date_format' => 'd-m-Y',
             't_c' => '6,94',
-            'notification_type' => 'nt-1',
+            'notification_type' => 'nt-1-sweetalert',
         ]);
     }
 }

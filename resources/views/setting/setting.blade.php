@@ -96,8 +96,8 @@
                                     value="{{$data_setting->notification_type}}">
                                 @endif
                                 <select name="notification_type" class="select2 form-control">
-                                    <option value="nt-1">Sweet Alert</option>
-                                    <option value="nt-2">Badge Bootstrap</option>
+                                    <option value="nt-1-sweetalert">Sweet Alert</option>
+                                    <option value="nt-2-bootstrap">Badge Bootstrap</option>
                                 </select>
                             </div>
                         </div>
