@@ -15,6 +15,10 @@
 	<!-- Favicon -->
 	<link rel="icon" type="image/vnd.microsoft.icon" href="{{ url('/favicon.ico') }}">
 
+	<!-- Scripts -->
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	@vite(['resources/js/app.js'])
+
 	<!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

@@ -79,3 +79,8 @@ CU:User and Proyect
 Page Errors
 composer require yajra/laravel-datatables:^10.0
 
+Button outline
+Button confirm
+
+npm install sweetalert2
+

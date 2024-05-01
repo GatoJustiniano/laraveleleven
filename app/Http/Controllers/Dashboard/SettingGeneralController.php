@@ -6,6 +6,7 @@ use Illuminate\Support\Str;
 use Illuminate\Http\Request;
 use App\Models\SettingGeneral;
 use Illuminate\Support\Facades\Gate;
+use App\Http\Controllers\Controller;
 
 class SettingGeneralController extends Controller
 {
