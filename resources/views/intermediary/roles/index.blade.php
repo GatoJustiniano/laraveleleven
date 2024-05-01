@@ -124,14 +124,13 @@
                 <p>Seguro que deseas eliminar el Rol seleccionado?</p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
-
                 <form id="formDelete" action="{{ route('roles.destroy',0) }}" method="POST"
                     data-action="{{ route('roles.destroy',0) }}">
                     @method('DELETE')
                     @csrf
-                    <button type="submit" class="btn btn-danger">Borrar</button>
+                    <button type="submit" class="btn btn-outline-danger">Borrar</button>
                 </form>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>

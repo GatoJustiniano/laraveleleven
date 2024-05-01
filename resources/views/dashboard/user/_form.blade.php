@@ -65,9 +65,12 @@
 			</tbody>
 		</table>
 	</div>
-	
-	<div class="col-12">
-		<input class="btn btn-outline-success" type="submit" value="{{ __('Save') }}">
-	</div>
+	<x-confirm-button>
+		@if ($pass)
+			{{ __('Guardar') }}
+			@else
+			{{ __('Actualizar') }}
+		@endif
+	</x-confirm-button>
 
 </div>

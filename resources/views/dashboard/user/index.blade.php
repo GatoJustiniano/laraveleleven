@@ -118,9 +118,9 @@
                     data-action="{{ route('user.destroy',0) }}">
                     @method('DELETE')
                     @csrf
-                    <button type="submit" class="btn btn-danger">Borrar</button>
+                    <button type="submit" class="btn btn-outline-danger">Borrar</button>
                 </form>
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
             </div>
         </div>
     </div>

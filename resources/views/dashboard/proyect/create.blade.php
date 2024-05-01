@@ -8,7 +8,7 @@
             <div class="card">
                 <div class="card-body">
                     <form action="{{ route('proyect.store') }}" method="POST">
-                        @include('dashboard.proyect._form')
+                        @include('dashboard.proyect._form', ['formCreate' => true])
                     </form>
                     
                 </div>

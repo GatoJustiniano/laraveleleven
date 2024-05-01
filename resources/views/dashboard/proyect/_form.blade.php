@@ -43,6 +43,10 @@
 	</div>
 </div>
 
-<div class="mb-3 ">
-	<input class="btn btn-outline-success" type="submit" value="{{ __('Save') }}">
-</div>
+<x-confirm-button>
+	@if ($formCreate)
+		{{ __('Guardar') }}
+		@else
+		{{ __('Actualizar') }}
+	@endif
+</x-confirm-button>

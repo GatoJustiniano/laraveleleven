@@ -23,20 +23,20 @@
               @endforeach
             </div>
           </div>
-          <div class="mb-3">
-            <button type="submit" class="btn btn-outline-success">Guardar</button>
-          </div>
+          <x-confirm-button>
+            {{ __('Guardar') }}
+          </x-confirm-button>
         </form>
       </div>
     </div>
   </div>
   <div class="col-md-6">
     <div class="card">
-      <div class="card-header">
+      <div class="card-body">
         <a href="{{ URL::previous() }}" class="btn btn-label-secondary d-grid w-100 mb-3">
           Retroceder
         </a>
-        <a href="{{ route('permissions.create') }}" class="btn btn-label-secondary d-grid w-100 mb-3">
+        <a href="{{ route('permissions.index') }}" class="btn btn-label-secondary d-grid w-100 mb-3">
           Crear nuevo permiso
         </a>
       </div>

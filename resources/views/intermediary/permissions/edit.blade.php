@@ -13,9 +13,9 @@
             <input type="text" class="form-control" name="name" value="{{ old('name', $permission->name) }}"
               autocomplete="off" autofocus>
           </div>
-          <div class="mb-3">
-            <button type="submit" class="btn btn-outline-success">Actualizar</button>
-          </div>
+          <x-confirm-button>
+            {{ __('Actualizar') }}
+          </x-confirm-button>
         </form>
 
       </div>

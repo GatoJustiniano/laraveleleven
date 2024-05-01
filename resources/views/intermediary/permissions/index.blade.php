@@ -54,15 +54,10 @@
                                         </a>
                                         @endcan
                                         @can('permissions.destroy')
-                                        <form action="{{ route('permissions.destroy', $permission->id) }}" method="post"
-                                            onsubmit="return confirm('Está seguro de eliminar?')"
-                                            style="display: inline-block;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" rel="tooltip" class="btn btn-outline-secondary btn-icon btn-sm" >
+                                            <button type="button" class="btn btn-outline-secondary btn-icon btn-sm"
+                                                data-bs-toggle="modal" data-bs-target="#deleteModal" data-id="{{ $permission->id }}">
                                                 <i class="material-icons">delete</i>
-                                            </button>
-                                        </form>
+                                            </button>                                    
                                         @endcan
                                     </div>
                                 </td>
@@ -100,8 +95,8 @@
                             placeholder="Ingrese un nombre de permiso" />
                     </div>
                     <div class="col-12 text-center mt-3">
-                        <button type="submit" class="btn btn-primary me-sm-3 me-1 mt-3">Guardar</button>
-                        <button type="reset" class="btn btn-label-secondary btn-reset mt-3" data-bs-dismiss="modal"
+                        <button type="submit" class="btn btn-outline-success me-sm-3 me-1 mt-3">Guardar</button>
+                        <button type="reset" class="btn btn-outline-secondary btn-reset mt-3" data-bs-dismiss="modal"
                             aria-label="Close">Cancelar
                         </button>
                     </div>
@@ -110,5 +105,42 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close">
+                </button>
+            </div>
+            <div class="modal-body">
+                <p>Seguro que deseas eliminar el Permiso seleccionado?</p>
+            </div>
+            <div class="modal-footer">
+                <form id="formDelete" action="{{ route('permissions.destroy',0) }}" method="POST"
+                    data-action="{{ route('permissions.destroy',0) }}">
+                    @method('DELETE')
+                    @csrf
+                    <button type="submit" class="btn btn-outline-danger">Borrar</button>
+                </form>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    window.onload = function () {
+        $('#deleteModal').on('show.bs.modal', function (event) {
+            var button = $(event.relatedTarget);
+            var id = button.data('id');
+            action = $('#formDelete').attr('data-action').slice(0,-1);
+            $('#formDelete').attr('action',action + id );
+            var modal = $(this);
+            modal.find('.modal-title').text('Vas a borrar el Permiso ' + id)            
+        });
+    };  
+</script>
 
 @endsection

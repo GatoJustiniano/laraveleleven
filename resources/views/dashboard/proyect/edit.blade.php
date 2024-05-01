@@ -9,7 +9,7 @@
                 <div class="card-body ">
                     <form action="{{ route('proyect.update', $proyect->id) }}" method="POST">
                         @method('PUT')
-                        @include('dashboard.proyect._form')
+                        @include('dashboard.proyect._form', ['formCreate' => false])
                     </form>
                     
                 </div>
