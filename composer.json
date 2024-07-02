@@ -11,7 +11,9 @@
         "laravel/sanctum": "^3.3",
         "laravel/tinker": "^2.8",
         "rap2hpoutre/laravel-log-viewer": "^2.4",
+        "rappasoft/laravel-authentication-log": "^4.0",
         "spatie/laravel-permission": "^6.7",
+        "torann/geoip": "^3.0",
         "yajra/laravel-datatables": "^10.0"
     },
     "require-dev": {
