@@ -184,12 +184,12 @@
   <div class="container-fluid">
     <div class="row">
       <div class="col sidebar mb-3">
-        <h1><i class="fa fa-calendar" aria-hidden="true"></i> Bitácora</h1>
+        <h1 class="mt-3"><i class="fa fa-calendar" aria-hidden="true"></i> Bitácora</h1>
         <p class="text-muted"><i></i></p>
 
-        <div class="custom-control custom-switch" style="padding-bottom:20px;">
-          <input type="checkbox" class="custom-control-input" id="darkSwitch">
-          <label class="custom-control-label" for="darkSwitch" style="margin-top: 6px;">Modo Oscuro</label>
+        <div class="form-check form-switch" style="padding-bottom:20px;">
+          <input type="checkbox" class="form-check-input" id="darkSwitch">
+          <label class="form-check-label" for="darkSwitch" style="margin-top: 6px;">Modo Oscuro</label>
         </div>
 
         <div class="list-group div-scroll">
