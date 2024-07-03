@@ -131,18 +131,37 @@
                 <!-- tabSegundo -->
                 <div class="tab-pane fade" id="pills-segundo" role="tabpanel" aria-labelledby="pills-segundo-tab">
                     <div class="card mb-4">
+                        <h5 class="card-header">Lista de dispositivos</h5>
                         <div class="table-responsive mb-3">
                             <table class="table datatable-invoice border-top">
                                 <thead>
                                     <tr>
-                                        <th>Operación</th>
-                                        <th>ID</th>
-                                        <th><i class='bx bx-trending-up'></i></th>
-                                        <th>Total</th>
-                                        <th>Issued Date</th>
-                                        <th>Actions</th>
+                                        <th>Navegador/Dispositivo</th>
+                                        <th>Hora inicio</th>
+                                        <th>sesión exitoso?</th>
+                                        <th>Hora final</th>
+                                        <th><i class='bx bx-trending-up'> IP</i></th>
+                                        <th>Location</th>
                                     </tr>
                                 </thead>
+                                <tbody>
+                                    @foreach ($user->authentications as $item)
+                                    <tr>
+                                        <td>{{ $item->user_agent }}</td>                               
+                                        <td>{{ $item->login_at ? $item->login_at->format($settingGeneral->date_format . ' H:i:s') : '' }}</td>                               
+                                        <td>
+                                            @if ($item->login_successful)
+                                            Yes
+                                            @else
+                                            not
+                                            @endif
+                                        </td>                               
+                                        <td>{{ $item->logout_at ? $item->logout_at->format($settingGeneral->date_format . ' H:i:s') : '-' }}</td>
+                                        <td>{{ $item->ip_address }}</td>                               
+                                        <td>-</td>                               
+                                    </tr>
+                                    @endforeach
+                                </tbody>
                             </table>
                         </div>
                     </div>
