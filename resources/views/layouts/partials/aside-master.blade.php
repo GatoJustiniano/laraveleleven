@@ -3,7 +3,11 @@
     <div class="app-brand demo ">
         <a href="/dashboard" class="app-brand-link">
             <span class="app-brand-logo demo">
-                <img width="30px" src="{{ asset('img_logo/' . $settingGeneral->site_logo )}}" alt ="icon logo" />
+                @if ($settingGeneral->site_logo)
+                <img width="30px" src="{{ asset('img_logo/' . $settingGeneral->site_logo)}}" alt="icon" />
+                @else
+                <img width="30px" src="" alt="icon" />
+                @endif
             </span>
             <span class="app-brand-text demo menu-text fw-bolder ms-2">
                 {{ $settingGeneral->site_title }}
@@ -26,21 +30,21 @@
                 <i class="menu-icon material-icons">assignment_turned_in</i>
                 Dashboards
             </a>
-            <ul class="menu-sub">                
+            <ul class="menu-sub">
                 @can('user.index')
-                    <li class="menu-item {{ $activePage == 'users' ? ' active' : '' }}">
-                        <a href="{{ route('user.index') }}" class="menu-link">
-                            Usuarios
-                        </a>
-                    </li>
+                <li class="menu-item {{ $activePage == 'users' ? ' active' : '' }}">
+                    <a href="{{ route('user.index') }}" class="menu-link">
+                        Usuarios
+                    </a>
+                </li>
                 @endcan
                 @can('proyect.index')
-                    <li class="menu-item {{ $activePage == 'proyects' ? ' active' : '' }}">
-                        <a href=" {{ route('proyect.index') }} " class="menu-link">
-                            <div>Proyectos</div>
-                        </a>
-                    </li>
-                @endcan 
+                <li class="menu-item {{ $activePage == 'proyects' ? ' active' : '' }}">
+                    <a href=" {{ route('proyect.index') }} " class="menu-link">
+                        <div>Proyectos</div>
+                    </a>
+                </li>
+                @endcan
             </ul>
         </li>
 
@@ -55,22 +59,22 @@
             </a>
             <ul class="menu-sub">
                 @can('roles.index')
-                    <li class="menu-item {{ $activePage == 'roles' ? ' active' : '' }}">
-                        <a href="{{ route('roles.index') }}" class="menu-link">
-                            <div>Roles</div>
-                        </a>
-                    </li>
+                <li class="menu-item {{ $activePage == 'roles' ? ' active' : '' }}">
+                    <a href="{{ route('roles.index') }}" class="menu-link">
+                        <div>Roles</div>
+                    </a>
+                </li>
                 @endcan
-                @can('permissions.index')    
-                    <li class="menu-item {{ $activePage == 'permissions' ? ' active' : '' }}">
-                        <a href="{{ route('permissions.index') }}" class="menu-link">
-                            <div>Permisos</div>
-                        </a>
-                    </li>
+                @can('permissions.index')
+                <li class="menu-item {{ $activePage == 'permissions' ? ' active' : '' }}">
+                    <a href="{{ route('permissions.index') }}" class="menu-link">
+                        <div>Permisos</div>
+                    </a>
+                </li>
                 @endcan
             </ul>
         </li>
-        
+
 
         <!-- Ayuda -->
         <li class="menu-header small text-uppercase"><span class="menu-header-text">Ayuda</span></li>
@@ -81,8 +85,7 @@
             </a>
         </li>
         <li class="menu-item">
-            <a href="{{ route('setting.general') }}"
-                class="menu-link">
+            <a href="{{ route('setting.general') }}" class="menu-link">
                 <i class="menu-icon tf-icons bx bx-cog"></i>
                 <div>Configuración general</div>
             </a>
