@@ -3,7 +3,7 @@
     <div class="app-brand demo ">
         <a href="/dashboard" class="app-brand-link">
             <span class="app-brand-logo demo">
-                @if ($settingGeneral->site_logo)
+                @if (!empty($settingGeneral->site_logo))
                 <img width="30px" src="{{ asset('img_logo/' . $settingGeneral->site_logo)}}" alt="icon" />
                 @else
                 <img width="30px" src="" alt="icon" />

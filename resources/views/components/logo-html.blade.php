@@ -1,7 +1,7 @@
 <div class="app-brand justify-content-center">
     <a href="/" class="app-brand-link gap-2">
         <span class="app-brand-logo demo">
-            @if ($settingGeneral->site_logo)
+            @if (!empty($settingGeneral->site_logo))
                 <img width="40px" src="{{ asset('img_logo/' . $settingGeneral->site_logo)}}" alt="icon" />
                 @else
                 <img width="40px" src="" alt="icon" />
