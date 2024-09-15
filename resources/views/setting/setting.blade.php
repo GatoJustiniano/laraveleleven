@@ -46,7 +46,7 @@
                             </div>
                             <div class="col-md-2 text-center">
                                 <label class="invisible">.</label>
-                                @if ($data_setting->site_logo)
+                                @if (!empty($data_setting->site_logo))
                                 <img src="{{ url('img_logo', $data_setting->site_logo) }}" width="50" alt="img logo">
                                 @endif
                             </div>
