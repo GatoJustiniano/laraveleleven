@@ -2,16 +2,14 @@
 
     <div class="app-brand demo ">
         <a href="/dashboard" class="app-brand-link">
+            @if (!empty($settingGeneral))
             <span class="app-brand-logo demo">
-                @if (!empty($settingGeneral->site_logo))
                 <img width="30px" src="{{ asset('img_logo/' . $settingGeneral->site_logo)}}" alt="icon" />
-                @else
-                <img width="30px" src="" alt="icon" />
-                @endif
             </span>
             <span class="app-brand-text demo menu-text fw-bolder ms-2">
                 {{ $settingGeneral->site_title }}
             </span>
+            @endif
         </a>
 
         <a href="javascript:void(0);" class="layout-menu-toggle menu-link text-large ms-auto">

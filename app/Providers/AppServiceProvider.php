@@ -35,7 +35,7 @@ class AppServiceProvider extends ServiceProvider
                 ['error' => $e->getMessage()]
             );
 
-            View::share('settingGeneral', null);
+            View::share('settingGeneral', new SettingGeneral());
         }
     }
 }
